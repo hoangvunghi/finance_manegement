@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#FFFFFF">
+
+    <!-- Header với ngày, chi tiêu và thu nhập -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFEB3B"
+        android:paddingBottom="8dp">
+
+        <!-- Ngày -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="26 Th12, 2024"
+            android:textSize="15sp"
+            android:textColor="#1F2937"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Chi tiêu -->
+        <TextView
+            android:id="@+id/tvSpending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiêu: -7.000"
+            android:textSize="13sp"
+            android:textColor="#DC2626"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif" />
+
+        <!-- Thu nhập -->
+        <TextView
+            android:id="@+id/tvIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thu nhập: +7.000.000"
+            android:textSize="13sp"
+            android:textColor="#059669"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+    <!-- Danh sách mục với background được định nghĩa inline -->
+    <LinearLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/ripple_background">
+
+        <!-- Icon danh mục với background hình tròn -->
+        <ImageView
+            android:id="@+id/ivCategoryIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerInside"
+            android:background="@drawable/circle_background"
+            android:elevation="1dp"/>
+
+        <!-- Thông tin chi tiết -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Tên danh mục -->
+            <TextView
+                android:id="@+id/tvCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh mục"
+                android:textSize="15sp"
+                android:textColor="#1F2937"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.01" />
+
+            <!-- Mô tả -->
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mô tả ngắn gọn"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Số tiền -->
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+500.000"
+            android:textSize="15sp"
+            android:textColor="#059669"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+</LinearLayout>
+

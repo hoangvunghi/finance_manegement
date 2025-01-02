@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/statistics"
+        android:padding="16dp"
+        android:background="#F5F5F5">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trở về trang chủ"
+            android:id="@+id/btnBackHome"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn loại thống kê"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-medium" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupStatisticType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/radioByDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Theo ngày"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioByYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Theo năm" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chọn ngày/năm muốn thống kê"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-medium" />
+
+        <EditText
+            android:id="@+id/txtStartDateStatistic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ngày bắt đầu"
+            android:backgroundTint="#2196F3"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/txtEndDateStatistic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ngày kết thúc"
+            android:backgroundTint="#2196F3"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/txtYearStatistic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Năm thống kê"
+            android:backgroundTint="#2196F3"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnStatistic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thống kê"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng quan"
+            android:textSize="18sp"
+            android:textColor="#FF5722"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thu nhập"
+            android:textSize="18sp"
+            android:textColor="#4CAF50"
+            android:paddingBottom="10dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartIncome"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chi tiêu"
+            android:textSize="18sp"
+            android:textColor="#F44336"
+            android:paddingBottom="10dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartExpense"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biểu đồ cột"
+            android:textSize="18sp"
+            android:textColor="#3F51B5"
+            android:paddingBottom="10dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biểu đồ đường"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:paddingBottom="10dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+</ScrollView>

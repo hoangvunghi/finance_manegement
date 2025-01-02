@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomeActivity">
+
+    <!-- Nút Menu -->
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn tính năng"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_margin="16dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn loại thống kê"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-medium" />
+    <!-- RadioGroup để chọn theo năm hoặc ngày -->
+    <RadioGroup
+        android:id="@+id/radioGroupDateType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp">
+
+        <RadioButton
+            android:id="@+id/radioByDateHome"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Theo ngày"
+            android:checked="true"
+            android:fontFamily="sans-serif-medium" />
+
+        <RadioButton
+            android:id="@+id/radioByYearHome"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Theo năm"
+            android:fontFamily="sans-serif-medium" />
+    </RadioGroup>
+
+    <!-- Nhập ngày bắt đầu và kết thúc (hiển thị khi chọn "Theo ngày") -->
+    <LinearLayout
+        android:id="@+id/dateRangeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etStartDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Ngày bắt đầu"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:id="@+id/etEndDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Ngày kết thúc"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+    <!-- Nhập năm (hiển thị khi chọn "Theo năm") -->
+    <LinearLayout
+        android:id="@+id/yearLayoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etYear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Nhập năm"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+    <!-- Nút lấy dữ liệu -->
+    <Button
+        android:id="@+id/btnGetData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lấy dữ liệu"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Danh sách dữ liệu -->
+    <ListView
+        android:id="@+id/lvHome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:divider="@color/light_grey"
+        android:dividerHeight="1dp"
+        android:padding="16dp" />
+
+</LinearLayout>
